@@ -1,0 +1,19 @@
+---
+app_name: My Awesome App
+version: 1.0.0
+settings:
+  logging: true
+  theme: dark
+  
+def resell(price, fee = 10)
+    price * 1.2 + fee
+end
+    puts resell(100)
+
+def friend_of_a_friend(price, lfee = 10)
+    p1 = resell(price, 10)
+    p2 = resell(p1)
+    p3 = resell(p2, lfee)
+end
+    puts friend_of_a_friend(100)
+    puts friend_of_a_friend(100, 50)
